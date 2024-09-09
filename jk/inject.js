@@ -7,5 +7,5 @@ document.querySelector("head > link:nth-child(17)").remove()
 var link = document.createElement('link');
 link.rel = 'icon';
 link.type = 'image/x-icon';
-link.href = 'https://js.arfsd.cyou/scripts/favicon.ico';
+link.href = 'https://masjidclock.arfsd.cyou/design-templates/jk/favicon.ico';
 document.head.appendChild(link);
