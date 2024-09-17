@@ -1,3 +1,16 @@
+// add favicon sendiri because why not
+document.querySelector("head > link:nth-child(17)").remove()
+var link = document.createElement('link');
+link.rel = 'icon';
+link.type = 'image/x-icon';
+link.href = 'https://masjidclock.arfsd.cyou/design-templates/jk/favicon.ico';
+document.head.appendChild(link);
+
+// add own og:image hehe
+$('meta[property="og:title"]').attr('content', 'Walimatulurus Amanina & Ariff');
+$('meta[property="og:description"]').attr('content', 'Anda dijemput ke majlis kami! Sila tekan link untuk RSVP 🩵');
+$('meta[property="og:image"]').attr('content', 'https://masjidclock.arfsd.cyou/design-templates/jk/ogimage.jpg');
+
 $(document).ready(function() {
     // Rename salam kaut to Sumbangan Ikhlas
     const salamKautElement = document.querySelector('button[data-bs-target="#salam_modal"]');
@@ -7,14 +20,6 @@ $(document).ready(function() {
     // Hide promo card
     document.querySelector("body > div.ekad-width.text-center > b > b > b > div.mt-4.px-1").style.display = 'none';
     document.querySelector("body > div.ekad-width.text-center > b > b > b > div:nth-child(2)").style.marginBottom = '9em';
-    
-    // add favicon sendiri because why not
-    document.querySelector("head > link:nth-child(17)").remove()
-    var link = document.createElement('link');
-    link.rel = 'icon';
-    link.type = 'image/x-icon';
-    link.href = 'https://masjidclock.arfsd.cyou/design-templates/jk/favicon.ico';
-    document.head.appendChild(link);
 
     // 1. Select the <select> element
     const selectElement = $('#rsvp1_hubungan');
