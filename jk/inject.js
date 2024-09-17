@@ -1,28 +1,31 @@
-// Rename salam kaut to Sumbangan Ikhlas
-const salamKautElement = document.querySelector('button[data-bs-target="#salam_modal"]');
-salamKautElement.innerHTML = '<i class="ti ti-cash position-absolute top-50 translate-middle-y f-25 start-20"></i><div>Sumbangan Ikhlas</div>';
-document.querySelector('#salam_modal > div.ekad-width > div > h5').innerHTML = 'Sumbangan Ikhlas <i class="ti ti-cash f-25"></i>';
+$(document).ready(function() {
+    // Rename salam kaut to Sumbangan Ikhlas
+    const salamKautElement = document.querySelector('button[data-bs-target="#salam_modal"]');
+    salamKautElement.innerHTML = '<i class="ti ti-cash position-absolute top-50 translate-middle-y f-25 start-20"></i><div>Sumbangan Ikhlas</div>';
+    document.querySelector('#salam_modal > div.ekad-width > div > h5').innerHTML = 'Sumbangan Ikhlas <i class="ti ti-cash f-25"></i>';
+    
+    // Hide promo card
+    document.querySelector("body > div.ekad-width.text-center > b > b > b > div.mt-4.px-1").style.display = 'none';
+    document.querySelector("body > div.ekad-width.text-center > b > b > b > div:nth-child(2)").style.marginBottom = '9em';
+    
+    // add favicon sendiri because why not
+    document.querySelector("head > link:nth-child(17)").remove()
+    var link = document.createElement('link');
+    link.rel = 'icon';
+    link.type = 'image/x-icon';
+    link.href = 'https://masjidclock.arfsd.cyou/design-templates/jk/favicon.ico';
+    document.head.appendChild(link);
 
-// Hide promo card
-document.querySelector("body > div.ekad-width.text-center > b > b > b > div.mt-4.px-1").style.display = 'none';
-document.querySelector("body > div.ekad-width.text-center > b > b > b > div:nth-child(2)").style.marginBottom = '9em';
+    // 1. Select the <select> element
+    const selectElement = $('#rsvp1_hubungan');
 
-// add favicon sendiri because why not
-document.querySelector("head > link:nth-child(17)").remove()
-var link = document.createElement('link');
-link.rel = 'icon';
-link.type = 'image/x-icon';
-link.href = 'https://masjidclock.arfsd.cyou/design-templates/jk/favicon.ico';
-document.head.appendChild(link);
+    // 2. Remove all options except the first one (default selected)
+    selectElement.find('option:not(:first)').remove();
 
-// customize pax group listing
-const selectElement = document.getElementById('rsvp1_hubungan');
-while (selectElement.options.length > 1) {
-    selectElement.remove(1);
-}
-const newOptions = ['Keluarga/Rakan Bapa Pengantin Perempuan', 'Keluarga/Rakan Ibu Pengantin Perempuan', 'Keluarga Pengantin Lelaki', 'Rakan Pengantin Perempuan'];
+    // 3. Add new options
+    const newOptions = ['Test1', 'Test2', 'Test3'];
 
-newOptions.forEach(optionText => {
-    const newOption = new Option(optionText, optionText);
-    selectElement.add(newOption);
+    newOptions.forEach(optionText => {
+        selectElement.append(new Option(optionText, optionText)); // Append new options
+    });
 });
