@@ -9,12 +9,12 @@ $(document).ready(function() {
     
     // add own og:image hehe
     $('meta[property="og:title"]').attr('content', 'Walimatulurus Amanina & Ariff');
-    $('meta[property="og:description"]').attr('content', 'Anda dijemput ke majlis kami! Sila tekan link untuk RSVP 🩵');
+    $('meta[name="og:description"]').attr('content', 'Anda dijemput ke majlis kami! Sila tekan link untuk RSVP 🩵');
     $('meta[property="og:image"]').attr('content', 'https://masjidclock.arfsd.cyou/design-templates/jk/ogimage.jpg');
     
-    $('meta[property="twitter:title"]').attr('content', 'Walimatulurus Amanina & Ariff');
-    $('meta[property="twitter:description"]').attr('content', 'Anda dijemput ke majlis kami! Sila tekan link untuk RSVP 🩵');
-    $('meta[property="twitter:image"]').attr('content', 'https://masjidclock.arfsd.cyou/design-templates/jk/ogimage.jpg');
+    $('meta[name="twitter:title"]').attr('content', 'Walimatulurus Amanina & Ariff');
+    $('meta[name="twitter:description"]').attr('content', 'Anda dijemput ke majlis kami! Sila tekan link untuk RSVP 🩵');
+    $('meta[name="twitter:image"]').attr('content', 'https://masjidclock.arfsd.cyou/design-templates/jk/ogimage.jpg');
 
     // Rename salam kaut to Sumbangan Ikhlas
     const salamKautElement = document.querySelector('button[data-bs-target="#salam_modal"]');
