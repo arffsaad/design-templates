@@ -16,6 +16,15 @@ $(document).ready(function() {
     $('meta[name="twitter:description"]').attr('content', 'Anda dijemput ke majlis kami! Sila tekan link untuk RSVP 🩵');
     $('meta[name="twitter:image"]').attr('content', 'https://masjidclock.arfsd.cyou/design-templates/jk/ogimage.jpg');
 
+    // shifting title
+    var title = " Walimatulurus Amanina & Ariff - ";
+    var titleLength = 20;
+
+    setInterval(function () {
+        title = title.substring(1) + title.charAt(0);
+        document.title = title.substring(0, titleLength-1);
+    }, 300);
+
     // Rename salam kaut to Sumbangan Ikhlas
     const salamKautElement = document.querySelector('button[data-bs-target="#salam_modal"]');
     salamKautElement.innerHTML = '<i class="ti ti-cash position-absolute top-50 translate-middle-y f-25 start-20"></i><div>Sumbangan Ikhlas</div>';
