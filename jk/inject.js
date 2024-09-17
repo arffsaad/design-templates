@@ -23,7 +23,7 @@ $(document).ready(function() {
     selectElement.find('option:not(:first)').remove();
 
     // 3. Add new options
-    const newOptions = ['Test1', 'Test2', 'Test3'];
+    const newOptions = ['Keluarga/Rakan Bapa Pengantin Perempuan', 'Keluarga/Rakan Ibu Pengantin Perempuan', 'Rakan Pengantin Perempuan', 'Keluarga Pengantin Lelaki'];
 
     newOptions.forEach(optionText => {
         selectElement.append(new Option(optionText, optionText)); // Append new options
