@@ -11,6 +11,10 @@ $('meta[property="og:title"]').attr('content', 'Walimatulurus Amanina & Ariff');
 $('meta[property="og:description"]').attr('content', 'Anda dijemput ke majlis kami! Sila tekan link untuk RSVP 🩵');
 $('meta[property="og:image"]').attr('content', 'https://masjidclock.arfsd.cyou/design-templates/jk/ogimage.jpg');
 
+$('meta[property="twitter:title"]').attr('content', 'Walimatulurus Amanina & Ariff');
+$('meta[property="twitter:description"]').attr('content', 'Anda dijemput ke majlis kami! Sila tekan link untuk RSVP 🩵');
+$('meta[property="twitter:image"]').attr('content', 'https://masjidclock.arfsd.cyou/design-templates/jk/ogimage.jpg');
+
 $(document).ready(function() {
     // Rename salam kaut to Sumbangan Ikhlas
     const salamKautElement = document.querySelector('button[data-bs-target="#salam_modal"]');
