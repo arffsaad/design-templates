@@ -49,7 +49,7 @@ $(document).ready(function () {
     var stripeButton = `
         <button class="butang white mb-2 mt-3 py-3" data-bs-target="#stripe" data-bs-toggle="offcanvas">
     <i class="ti ti-credit-card-pay position-absolute top-50 translate-middle-y f-25 start-20"></i>
-    <div><span class="label-salam-fpx f-12">Kredit/Debit/GrabPay (Stripe)</span></div>
+    <div><span class="label-salam-fpx f-12">Kredit/Debit & GrabPay</span></div>
 </button>
     `;
 
