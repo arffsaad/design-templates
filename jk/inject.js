@@ -131,6 +131,12 @@ $(document).ready(function () {
         stripeIframe += url
         stripeIframe += `" style="width: 100%; height: 100%; border: none;"></iframe>
             </div>
+            window.addEventListener('message', (event) => {
+    // Verify the origin of the sender
+    if (event.origin === 'https://stripe.arfsd.cyou') {
+        closeStripe(event)
+    }
+});
         </div>
         `
         $("#fpx").after(stripeIframe);
