@@ -117,7 +117,7 @@ $(document).ready(function () {
     <div class="offcanvas-body bg-body-secondary p-4">
         <div class="ekad-width">
             <div class="nota fw-bold mt-2 rounded p-4">
-                <i class="bi bi-exclamation-triangle-fill"></i><br>
+                <i class="bi bi-emoji-laughing-fill"></i><br>
                 <span class="label-salam-note">Terima kasih atas sumbangan anda. Moga kita dapat bertemu pada majlis nanti!</span>
             </div>
         </div>
