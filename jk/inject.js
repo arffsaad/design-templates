@@ -105,40 +105,16 @@ $(document).ready(function () {
 
     // scripting
     $("#rm20str").click(function () {
-        $.get('https://stripe.arfsd.cyou/create/rm20')
-            .done(function (data) {
-                openStripe(data);
-            })
-            .fail(function (xhr, status, error) {
-                alert("Error: " + error);
-            });
+        openStripe('https://stripe.arfsd.cyou/create/rm20')
     });
     $("#rm50str").click(function () {
-        $.get('https://stripe.arfsd.cyou/create/rm50')
-            .done(function (data) {
-                openStripe(data);
-            })
-            .fail(function (xhr, status, error) {
-                alert("Error: " + error);
-            });
+        openStripe('https://stripe.arfsd.cyou/create/rm50')
     });
     $("#rm100str").click(function () {
-        $.get('https://stripe.arfsd.cyou/create/rm100')
-            .done(function (data) {
-                openStripe(data);
-            })
-            .fail(function (xhr, status, error) {
-                alert("Error: " + error);
-            });
+        openStripe('https://stripe.arfsd.cyou/create/rm100')
     });
     $("#customstr").click(function () {
-        $.get('https://stripe.arfsd.cyou/create/free')
-            .done(function (data) {
-                openStripe(data);
-            })
-            .fail(function (xhr, status, error) {
-                alert("Error: " + error);
-            });
+        openStripe('https://stripe.arfsd.cyou/create/free')
     });
 
     // Callback modal
@@ -160,8 +136,9 @@ $(document).ready(function () {
         $("#fpx").after(stripeIframe);
     }
 
-    function closeStripe() {
+    function closeStripe(sess) {
         $('#stripeCheckout').remove();
+        alert(JSON.stringify(sess))
     }
     
     if (window.location.hash == '#stripeSuccess') {
