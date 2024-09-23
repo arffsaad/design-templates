@@ -107,7 +107,7 @@ $(document).ready(function () {
     $("#rm20str").click(function () {
         $.get('https://stripe.arfsd.cyou/create/rm20')
             .done(function (data) {
-                window.location.href = data;
+                openStripe(data);
             })
             .fail(function (xhr, status, error) {
                 alert("Error: " + error);
@@ -116,7 +116,7 @@ $(document).ready(function () {
     $("#rm50str").click(function () {
         $.get('https://stripe.arfsd.cyou/create/rm50')
             .done(function (data) {
-                window.location.href = data;
+                openStripe(data);
             })
             .fail(function (xhr, status, error) {
                 alert("Error: " + error);
@@ -125,7 +125,7 @@ $(document).ready(function () {
     $("#rm100str").click(function () {
         $.get('https://stripe.arfsd.cyou/create/rm100')
             .done(function (data) {
-                window.location.href = data;
+                openStripe(data);
             })
             .fail(function (xhr, status, error) {
                 alert("Error: " + error);
@@ -134,7 +134,7 @@ $(document).ready(function () {
     $("#customstr").click(function () {
         $.get('https://stripe.arfsd.cyou/create/free')
             .done(function (data) {
-                window.location.href = data;
+                openStripe(data);
             })
             .fail(function (xhr, status, error) {
                 alert("Error: " + error);
@@ -142,6 +142,28 @@ $(document).ready(function () {
     });
 
     // Callback modal
+    function openStripe(url) {
+        var stripeIframe = `
+        <div id="stripeCheckout" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; 
+                display: flex; justify-content: center; align-items: center; 
+                padding: 1rem; background: rgba(255, 255, 255, 0.6); 
+                z-index: 1000;">
+            <div style="width: calc(100% - 4rem); height: calc(100% - 2rem); 
+                        background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+                        display: flex; justify-content: center; align-items: center;">
+                <iframe src="` 
+        stripeIframe += url
+        stripeIframe += `" style="width: 100%; height: 100%; border: none;"></iframe>
+            </div>
+        </div>
+        `
+        $("#fpx").after(stripeIframe);
+    }
+
+    function closeStripe() {
+        $('#stripeCheckout').remove();
+    }
+    
     if (window.location.hash == '#stripeSuccess') {
         document.querySelector("#gate > div > div > div.animate__animated.animate__fadeInUp.animate__slow.d-05s.mt-4 > button").click()
         alert('Payment Success!')
