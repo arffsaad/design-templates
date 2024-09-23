@@ -140,5 +140,11 @@ $(document).ready(function () {
                 alert("Error: " + error);
             });
     });
+
+    // Callback modal
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('stripeSuccess')) {
+        alert('Payment Success!')
+    }
     // scripting complete
 });
