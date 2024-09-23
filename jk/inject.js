@@ -127,7 +127,7 @@ $(document).ready(function () {
             <div style="width: calc(100% - 4rem); height: calc(100% - 2rem); 
                         background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
                         display: flex; justify-content: center; align-items: center;">
-                <iframe src="` 
+                <iframe allow="payment *" src="` 
         stripeIframe += url
         stripeIframe += `" style="width: 100%; height: 100%; border: none;"></iframe>
             </div>
