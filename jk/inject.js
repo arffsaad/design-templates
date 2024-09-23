@@ -142,7 +142,7 @@ $(document).ready(function () {
     });
 
     // Callback modal
-    if (window.location.hash == 'stripeSuccess') {
+    if (window.location.hash == '#stripeSuccess') {
         document.querySelector("#gate > div > div > div.animate__animated.animate__fadeInUp.animate__slow.d-05s.mt-4 > button").click()
         alert('Payment Success!')
     }
