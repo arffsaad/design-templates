@@ -49,18 +49,21 @@ $(document).ready(function () {
     var stripeButton = `
         <button class="butang white mb-2 mt-3 py-3" data-bs-target="#stripe" data-bs-toggle="offcanvas">
     <i class="ti ti-credit-card-pay position-absolute top-50 translate-middle-y f-25 start-20"></i>
-    <div><span class="label-salam-fpx f-12">Kredit/Debit & GrabPay</span></div>
+    <div><span class="label-salam-fpx f-12">GrabPay, Apple Pay, Debit/Credit</span></div>
 </button>
     `;
 
     // Append the new button after the last button
-    $('[data-bs-target="#scan_qr_code"]').after(stripeButton);
+    $('#copy_no_acc').before(stripeButton);
+    $('[data-bs-target="#stripe"').after($('[data-bs-target="#fpx"'))
+    $('[data-bs-target="#scan_qr_code"').after($('#copy_no_acc'))
+    
 
     var stripeModal = `
     <div class="offcanvas offcanvas-bottom" id="stripe">
     <div class="ekad-width">
         <div class="position-relative px-4 py-2">
-            <div class="my-2">Kredit/Debit/GrabPay</div>
+            <div class="my-2">GrabPay, Apple Pay, Debit/Credit</div>
             <div class="text-end">
                 <button type="button"
                     class="btn position-absolute translate-middle close-canvas border-secondary-subtle rounded border bg-white shadow-sm"
@@ -176,6 +179,11 @@ stripeIframe += url
 stripeIframe += `" style="width: 100%; height: 100%; border: none;"></iframe>
         </div>
     </div>
+    <script>
+        $('#closeStripeIframe').click(function () {
+            $('#stripeCheckout').remove();
+        })
+    </script>
 `
         $("#fpx").after(stripeIframe);
 
