@@ -55,10 +55,7 @@ $(document).ready(function () {
 
     // Append the new button after the last button
     $('#copy_no_acc').before(stripeButton);
-    $('[data-bs-target="#stripe"').after($('[data-bs-target="#fpx"'))
-    $('[data-bs-target="#scan_qr_code"').after($('#copy_no_acc'))
     
-
     var stripeModal = `
     <div class="offcanvas offcanvas-bottom" id="stripe">
     <div class="ekad-width">
@@ -134,6 +131,9 @@ $(document).ready(function () {
         var thanks = new bootstrap.Offcanvas($('#stripeThanks')).show()
     }
 });
+$('#copy_no_acc').before($('[data-bs-target="#stripe"'));
+    $('[data-bs-target="#stripe"').after($('[data-bs-target="#fpx"'))
+    $('[data-bs-target="#scan_qr_code"').after($('#copy_no_acc'))
     </script>
 `;
 
