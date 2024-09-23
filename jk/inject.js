@@ -76,7 +76,7 @@ $(document).ready(function () {
               <div>
                   <div class="flex-column">
                       <a id="customstr" class="btn btn-light btn-flex fw rounded-pill mt-2 border"><span
-                              class="f-12">Jumlah Sendiri</span><b><b></b></b></a><b><b>
+                              class="f-12"></span><b>Jumlah Sendiri<b></b></b></a><b><b>
                       <a id="rm20str" class="btn btn-light btn-flex fw rounded-pill mt-2 border"><span
                               class="f-12">RM</span><b> 20<b></b></b></a><b><b>
                               <a id="rm50str" class="btn btn-light btn-flex fw rounded-pill mt-2 border"><span
