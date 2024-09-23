@@ -54,7 +54,7 @@ $(document).ready(function () {
     `;
 
     // Append the new button after the last button
-    $('[data-bs-target="#fpx"]').after(stripeButton);
+    $('[data-bs-target="#scan_qr_code"]').after(stripeButton);
 
     var stripeModal = `
   <div class="offcanvas offcanvas-bottom" id="stripe">
