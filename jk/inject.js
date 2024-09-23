@@ -137,8 +137,8 @@ $(document).ready(function () {
     if (event.origin === 'https://stripe.arfsd.cyou') {
         closeStripe(event)
     }
-    </script>
 });
+    </script>
         </div>
         `
         $("#fpx").after(stripeIframe);
