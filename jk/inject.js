@@ -144,6 +144,7 @@ $(document).ready(function () {
     // Callback modal
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('stripeSuccess')) {
+        document.querySelector("#gate > div > div > div.animate__animated.animate__fadeInUp.animate__slow.d-05s.mt-4 > button").click()
         alert('Payment Success!')
     }
     // scripting complete
