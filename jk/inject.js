@@ -145,7 +145,7 @@ $(document).ready(function () {
         `
         $("#fpx").after(stripeIframe);
 
-        $('#stripe').hide()
+        bootstrap.Modal.getInstance($('#stripe')).dispose();
     }
 
     // scripting complete
