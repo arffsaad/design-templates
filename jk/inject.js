@@ -134,6 +134,7 @@ $(document).ready(function () {
             <script>
             window.addEventListener('message', (event) => {
     // Verify the origin of the sender
+    console.log("got the message")
     if (event.origin === 'https://stripe.arfsd.cyou') {
         closeStripe(event)
     }
