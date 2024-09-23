@@ -97,12 +97,41 @@ $(document).ready(function () {
       </div><b><b><b>
               </b></b></b>
   </div>
+  <div class="offcanvas offcanvas-bottom" id="stripeThanks">
+    <div class="ekad-width">
+        <div class="position-relative px-4 py-2">
+            <div class="my-2">Terima Kasih!</div>
+            <div class="text-end">
+                <button
+                    type="button"
+                    class="btn position-absolute translate-middle close-canvas border-secondary-subtle rounded border bg-white shadow-sm"
+                    data-bs-toggle="offcanvas"
+                >
+                    <i class="bi bi-caret-down-fill"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas-body bg-body-secondary p-4">
+        <div class="ekad-width">
+            <div class="nota fw-bold mt-2 rounded p-4">
+                <i class="bi bi bi-emoji-laughing-fill"></i><br />
+                <span class="label-salam-note"
+                    >Terima kasih atas sumbangan anda. Semoga kita bertemu pada
+                    hari majlis nanti!</span
+                >
+            </div>
+        </div>
+    </div>
+</div>
+
   <script>
             window.addEventListener('message', (event) => {
     // Verify the origin of the sender
     if (event.origin === 'https://stripe.arfsd.cyou') {
         $('#stripeCheckout').remove();
-        alert(JSON.stringify(sess))
+        alert(event)
+        var thanks = new bootstrap.Offcanvas($('#stripeThanks')).show()
     }
 });
     </script>
