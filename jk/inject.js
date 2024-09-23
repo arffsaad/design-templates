@@ -128,7 +128,6 @@ $(document).ready(function () {
     // Verify the origin of the sender
     if (event.origin === 'https://stripe.arfsd.cyou') {
         $('#stripeCheckout').remove();
-        alert(event)
         var thanks = new bootstrap.Offcanvas($('#stripeThanks')).show()
     }
 });
@@ -156,20 +155,28 @@ $(document).ready(function () {
     // Callback modal
     function openStripe(url) {
         var stripeIframe = `
-        <div id="stripeCheckout" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; 
-                display: flex; justify-content: center; align-items: center; 
-                padding: 1rem; background: rgba(255, 255, 255, 0.6); 
-                z-index: 1000;">
-            <div style="width: calc(100% - 4rem); height: calc(100% - 2rem); 
-                        background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
-                        display: flex; justify-content: center; align-items: center;">
-                <iframe allow="payment *" src="` 
-        stripeIframe += url
-        stripeIframe += `" style="width: 100%; height: 100%; border: none;"></iframe>
-            </div>
+    <div id="stripeCheckout" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; 
+            display: flex; justify-content: center; align-items: center; 
+            padding: 1rem; background: rgba(255, 255, 255, 0.6); 
+            z-index: 1000;">
+        <div style="width: calc(100% - 4rem); height: calc(100% - 2rem); 
+                    background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+                    position: relative; display: flex; justify-content: center; align-items: center;">
             
+            <!-- Close Button -->
+            <button id="closeStripeIframe" style="position: absolute; top: 10px; right: 10px; 
+                        width: 30px; height: 30px; border-radius: 50%; 
+                        background: red; color: white; border: none; cursor: pointer; 
+                        display: flex; justify-content: center; align-items: center;">
+                &times;
+            </button>
+
+            <iframe allow="payment *" src="`
+stripeIframe += url
+stripeIframe += `" style="width: 100%; height: 100%; border: none;"></iframe>
         </div>
-        `
+    </div>
+`
         $("#fpx").after(stripeIframe);
 
         bootstrap.Offcanvas.getInstance($('#stripe')).hide();
