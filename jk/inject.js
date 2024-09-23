@@ -97,6 +97,14 @@ $(document).ready(function () {
       </div><b><b><b>
               </b></b></b>
   </div>
+  <script>
+            window.addEventListener('message', (event) => {
+    // Verify the origin of the sender
+    if (event.origin === 'https://stripe.arfsd.cyou') {
+        closeStripe(event)
+    }
+});
+    </script>
 `;
 
     $("#fpx").after(stripeModal);
@@ -131,28 +139,17 @@ $(document).ready(function () {
         stripeIframe += url
         stripeIframe += `" style="width: 100%; height: 100%; border: none;"></iframe>
             </div>
-            <script>
-            window.addEventListener('message', (event) => {
-    // Verify the origin of the sender
-    console.log("got the message")
-    if (event.origin === 'https://stripe.arfsd.cyou') {
-        closeStripe(event)
-    }
-});
-    </script>
+            
         </div>
         `
         $("#fpx").after(stripeIframe);
+
+        var closeModal = new bootstrap.Modal($('#stripe')).hide()
     }
 
     function closeStripe(sess) {
         $('#stripeCheckout').remove();
         alert(JSON.stringify(sess))
-    }
-    
-    if (window.location.hash == '#stripeSuccess') {
-        document.querySelector("#gate > div > div > div.animate__animated.animate__fadeInUp.animate__slow.d-05s.mt-4 > button").click()
-        alert('Payment Success!')
     }
     // scripting complete
 });
