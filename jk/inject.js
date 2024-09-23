@@ -101,7 +101,8 @@ $(document).ready(function () {
             window.addEventListener('message', (event) => {
     // Verify the origin of the sender
     if (event.origin === 'https://stripe.arfsd.cyou') {
-        closeStripe(event)
+        $('#stripeCheckout').remove();
+        alert(JSON.stringify(sess))
     }
 });
     </script>
@@ -144,12 +145,8 @@ $(document).ready(function () {
         `
         $("#fpx").after(stripeIframe);
 
-        var closeModal = new bootstrap.Modal($('#stripe')).hide()
+        $('#stripe').hide()
     }
 
-    function closeStripe(sess) {
-        $('#stripeCheckout').remove();
-        alert(JSON.stringify(sess))
-    }
     // scripting complete
 });
