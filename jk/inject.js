@@ -57,6 +57,50 @@ $(document).ready(function () {
     $('[data-bs-target="#scan_qr_code"]').after(stripeButton);
 
     var stripeModal = `
+    <div class="offcanvas offcanvas-bottom" id="stripe">
+    <div class="ekad-width">
+        <div class="position-relative px-4 py-2">
+            <div class="my-2">Kredit/Debit/GrabPay</div>
+            <div class="text-end">
+                <button type="button"
+                    class="btn position-absolute translate-middle close-canvas border-secondary-subtle rounded border bg-white shadow-sm"
+                    data-bs-target="#salam_modal" data-bs-toggle="offcanvas">
+                        <i class="bi bi-caret-down-fill"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas-body bg-body-secondary p-4">
+        <div class="ekad-width">
+            <div class="nota fw-bold mt-2 rounded p-4">
+                <i class="bi bi-exclamation-triangle-fill"></i><br>
+                <span class="label-salam-note">Apple Pay dan Google Pay juga diterima.</span>
+            </div>
+            <div>
+                <div class="flex-column">
+                    <a id="customstr" class="btn btn-light btn-flex fw rounded-pill mt-2 border">
+                        <b>Jumlah Sendiri</b>
+                    </a>
+                    <a id="rm20str" class="btn btn-light btn-flex fw rounded-pill mt-2 border">
+                        <span class="f-12">RM</span><b> 20</b>
+                    </a>
+                    <a id="rm50str" class="btn btn-light btn-flex fw rounded-pill mt-2 border">
+                        <span class="f-12">RM</span><b> 50</b>
+                    </a>
+                    <a id="rm100str" class="btn btn-light btn-flex fw rounded-pill mt-2 border">
+                        <span class="f-12">RM</span><b> 100</b>
+                    </a>
+                </div>
+                <section class="mb-5 mt-4">
+                    <a class="pointer btn btn-outline-secondary rounded-pill fw-bold pb-2" data-bs-target="#salam_modal" data-bs-toggle="offcanvas">
+                        <i class="bi bi-x-circle-fill"></i> 
+                        <span class="label-btn-batal">Batal</span>
+                    </a>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
   <div class="offcanvas offcanvas-bottom" id="stripeThanks">
     <div class="ekad-width">
         <div class="position-relative px-4 py-2">
