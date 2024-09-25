@@ -8,13 +8,13 @@ $(document).ready(function () {
     document.head.appendChild(link);
 
     // add own og:image hehe
-    $('meta[property="og:title"]').attr('content', 'Walimatulurus Amanina & Ariff');
-    $('meta[name="og:description"]').attr('content', 'Anda dijemput ke majlis kami! Sila tekan link untuk RSVP 🩵');
-    $('meta[property="og:image"]').attr('content', 'https://masjidclock.arfsd.cyou/design-templates/jk/ogimage.jpg');
+    // $('meta[property="og:title"]').attr('content', 'Walimatulurus Amanina & Ariff');
+    // $('meta[name="og:description"]').attr('content', 'Anda dijemput ke majlis kami! Sila tekan link untuk RSVP 🩵');
+    // $('meta[property="og:image"]').attr('content', 'https://masjidclock.arfsd.cyou/design-templates/jk/ogimage.jpg');
 
-    $('meta[name="twitter:title"]').attr('content', 'Walimatulurus Amanina & Ariff');
-    $('meta[name="twitter:description"]').attr('content', 'Anda dijemput ke majlis kami! Sila tekan link untuk RSVP 🩵');
-    $('meta[name="twitter:image"]').attr('content', 'https://masjidclock.arfsd.cyou/design-templates/jk/ogimage.jpg');
+    // $('meta[name="twitter:title"]').attr('content', 'Walimatulurus Amanina & Ariff');
+    // $('meta[name="twitter:description"]').attr('content', 'Anda dijemput ke majlis kami! Sila tekan link untuk RSVP 🩵');
+    // $('meta[name="twitter:image"]').attr('content', 'https://masjidclock.arfsd.cyou/design-templates/jk/ogimage.jpg');
 
     // shifting title
     // var title = " Walimatulurus Amanina & Ariff - ";
