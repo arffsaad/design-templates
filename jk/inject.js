@@ -17,13 +17,13 @@ $(document).ready(function () {
     $('meta[name="twitter:image"]').attr('content', 'https://masjidclock.arfsd.cyou/design-templates/jk/ogimage.jpg');
 
     // shifting title
-    var title = " Walimatulurus Amanina & Ariff - ";
-    var titleLength = 20;
+    // var title = " Walimatulurus Amanina & Ariff - ";
+    // var titleLength = 20;
 
-    setInterval(function () {
-        title = title.substring(1) + title.charAt(0);
-        document.title = title.substring(0, titleLength - 1);
-    }, 300);
+    // setInterval(function () {
+    //     title = title.substring(1) + title.charAt(0);
+    //     document.title = title.substring(0, titleLength - 1);
+    // }, 300);
 
     // Rename salam kaut to Sumbangan Ikhlas
     const salamKautElement = document.querySelector('button[data-bs-target="#salam_modal"]');
