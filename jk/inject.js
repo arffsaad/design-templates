@@ -7,6 +7,16 @@ $(document).ready(function () {
     link.href = 'https://masjidclock.arfsd.cyou/design-templates/jk/favicon.ico';
     document.head.appendChild(link);
 
+    // Change all script src attributes
+    $('script[src^="https://ekaddigital.com"]').each(function() {
+        $(this).attr('src', $(this).attr('src').replace('https://ekaddigital.com', window.location.href;)); // Replace with your new URL
+    });
+
+    // Change all link href attributes
+    $('link[href^="https://ekaddigital.com"]').each(function() {
+        $(this).attr('href', $(this).attr('href').replace('https://ekaddigital.com', window.location.href;)); // Replace with your new URL
+    });
+
     // add own og:image hehe
     // $('meta[property="og:title"]').attr('content', 'Walimatulurus Amanina & Ariff');
     // $('meta[name="og:description"]').attr('content', 'Anda dijemput ke majlis kami! Sila tekan link untuk RSVP 🩵');
