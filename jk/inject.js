@@ -54,6 +54,11 @@ $(document).ready(function () {
     document.querySelector("body > div.ekad-width.text-center > b > b > b > div.mt-4.px-1").style.display = 'none';
     document.querySelector("body > div.ekad-width.text-center > b > b > b > div:nth-child(2)").style.marginBottom = '9em';
 
+    // rearrange card
+    var sumbanganCard = $('#salam-modal').closest('.mt-4.px-3');
+    $('#rsvp').after(sumbanganCard)
+    
+
     // Add custom rsvp groups
     const selectElement = $('#rsvp1_hubungan');
     selectElement.find('option:not(:first)').remove();
