@@ -8,14 +8,16 @@ $(document).ready(function () {
     document.head.appendChild(link);
 
     // Change all script src attributes
-    $('script[src^="https://ekaddigital.com"]').each(function() {
-        $(this).attr('src', $(this).attr('src').replace('https://ekaddigital.com', window.location.href)); // Replace with your new URL
-    });
+    if (window.location.href != 'https://ekaddigital.com') {
+        $('script[src^="https://ekaddigital.com"]').each(function() {
+            $(this).attr('src', $(this).attr('src').replace('https://ekaddigital.com', window.location.href)); // Replace with your new URL
+        });
 
-    // Change all link href attributes
-    $('link[href^="https://ekaddigital.com"]').each(function() {
-        $(this).attr('href', $(this).attr('href').replace('https://ekaddigital.com', window.location.href)); // Replace with your new URL
-    });
+        // Change all link href attributes
+        $('link[href^="https://ekaddigital.com"]').each(function() {
+            $(this).attr('href', $(this).attr('href').replace('https://ekaddigital.com', window.location.href)); // Replace with your new URL
+        });
+    }
 
     // add own og:image hehe
     // $('meta[property="og:title"]').attr('content', 'Walimatulurus Amanina & Ariff');
