@@ -1,4 +1,6 @@
+
 $(document).ready(function () {
+    const headURL = "https://nina.arfsd.cyou";
     // add favicon sendiri because why not
     document.querySelector("head > link:nth-child(17)").remove()
     var link = document.createElement('link');
@@ -8,19 +10,19 @@ $(document).ready(function () {
     document.head.appendChild(link);
 
     // Change all script src attributes
-    if (window.location.href !== 'https://ekaddigital.com/lanaiasmara/AG11697') {
+    if (!(window.location.href).startsWith('https://ekaddigital.com')) {
         $('script[src^="https://ekaddigital.com"]').each(function() {
-            $(this).attr('src', $(this).attr('src').replace('https://ekaddigital.com/', window.location.href)); // Replace with your new URL
+            $(this).attr('src', $(this).attr('src').replace('https://ekaddigital.com/', headURL));
         });
 
         // Change all link href attributes
         $('link[href^="https://ekaddigital.com"]').each(function() {
-            $(this).attr('href', $(this).attr('href').replace('https://ekaddigital.com/', window.location.href)); // Replace with your new URL
+            $(this).attr('href', $(this).attr('href').replace('https://ekaddigital.com/', headURL));
         });
         $('form').each(function() {
             var currentAction = $(this).attr('action');
             if (currentAction && currentAction.startsWith('https://ekaddigital.com')) {
-                $(this).attr('action', currentAction.replace('https://ekaddigital.com/', window.location.href));
+                $(this).attr('action', currentAction.replace('https://ekaddigital.com/', headURL));
             }
         });
     }
