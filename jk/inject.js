@@ -55,7 +55,7 @@ $(document).ready(function () {
     document.querySelector("body > div.ekad-width.text-center > b > b > b > div:nth-child(2)").style.marginBottom = '9em';
 
     // rearrange card
-    var sumbanganCard = $('#salam-modal').closest('.mt-4.px-3');
+    var sumbanganCard = $('#salam-modal').parent();
     $('#rsvp').after(sumbanganCard)
     
 
