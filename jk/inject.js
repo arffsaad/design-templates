@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    alert(1);
     // add favicon sendiri because why not
     document.querySelector("head > link:nth-child(17)").remove()
     var link = document.createElement('link');
