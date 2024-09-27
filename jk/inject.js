@@ -56,7 +56,9 @@ $(document).ready(function () {
 
     // rearrange card
     var sumbanganCard = $('#salam_modal').parent();
+    var carousellCard = $('#gmbr').parent().parent();
     $('#rsvp').after(sumbanganCard)
+    $('#rsvp').before(carousellCard)
     
 
     // Add custom rsvp groups
