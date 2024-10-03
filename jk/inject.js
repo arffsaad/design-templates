@@ -1,6 +1,8 @@
-
+if (!(window.location.href).includes('yangarifftentangnina.com')) {
+    window.location.replace("https://yangarifftentangnina.com")
+}
 $(document).ready(function () {
-    const headURL = "https://nina.arfsd.cyou";
+    const headURL = "https://yangarifftentangnina.com";
     // add favicon sendiri because why not
     document.querySelector("head > link:nth-child(17)").remove()
     var link = document.createElement('link');
