@@ -12,22 +12,18 @@ $(document).ready(function () {
     document.head.appendChild(link);
 
     // Change all script src attributes
-    // if (!(window.location.href).startsWith('https://ekaddigital.com')) {
-    //     $('script[src^="https://ekaddigital.com"]').each(function() {
-    //         $(this).attr('src', $(this).attr('src').replace('https://ekaddigital.com', headURL));
-    //     });
+    if (!(window.location.href).startsWith('https://ekaddigital.com')) {
+        $('script[src^="https://ekaddigital.com"]').each(function() {
+            $(this).attr('src', $(this).attr('src').replace('https://ekaddigital.com', ''));
+        });
 
-    //     // Change all link href attributes
-    //     $('link[href^="https://ekaddigital.com"]').each(function() {
-    //         $(this).attr('href', $(this).attr('href').replace('https://ekaddigital.com', headURL));
-    //     });
-    //     $('form').each(function() {
-    //         var currentAction = $(this).attr('action');
-    //         if (currentAction && currentAction.startsWith('https://ekaddigital.com')) {
-    //             $(this).attr('action', currentAction.replace('https://ekaddigital.com', headURL));
-    //         }
-    //     });
-    // }
+        $('form').each(function() {
+            var currentAction = $(this).attr('action');
+            if (currentAction && currentAction.startsWith('https://ekaddigital.com')) {
+                $(this).attr('action', currentAction.replace('https://ekaddigital.com', ''));
+            }
+        });
+    }
 
     // add own og:image hehe
     // $('meta[property="og:title"]').attr('content', 'Walimatulurus Amanina & Ariff');
