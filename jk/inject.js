@@ -4,7 +4,7 @@ if (!(window.location.href).includes('yangarifftentangnina.com')) {
 $(document).ready(function () {
     const headURL = "https://yangarifftentangnina.com";
     // add favicon sendiri because why not
-    document.querySelector("head > link:nth-child(17)").remove()
+    // document.querySelector("head > link:nth-child(17)").remove()
     var link = document.createElement('link');
     link.rel = 'icon';
     link.type = 'image/x-icon';
