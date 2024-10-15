@@ -152,8 +152,16 @@ $(document).ready(function () {
             window.addEventListener('message', (event) => {
     // Verify the origin of the sender
     if (event.origin === 'https://stripe.arfsd.cyou') {
-        $('#stripeCheckout').remove();
-        var thanks = new bootstrap.Offcanvas($('#stripeThanks')).show()
+        const message = event.data;
+
+        // Check if the message is the one you are expecting
+        if (message === 'CLOSESTRIPEWINDOW') {
+            $('#stripeCheckout').remove();
+            var thanks = new bootstrap.Offcanvas($('#stripeThanks')).show()
+        } else {
+            console.log("MSG FROM IFRAME" + event.data)
+        }
+        
     }
 });
 $('#copy_no_acc').before($('[data-bs-target="#stripe"'));
