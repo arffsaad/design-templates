@@ -157,8 +157,9 @@ $(document).ready(function () {
         // Check if the message is the one you are expecting
         if (message === 'CLOSESTRIPEWINDOW') {
             $('#stripeCheckout').remove();
+            $('#stripeListener').remove();
             var thanks = new bootstrap.Offcanvas($('#stripeThanks')).show()
-        } else {
+        } else if (message.startsWith('LISTENSTRIPEWEBHOOK=')) {
             console.log("MSG FROM IFRAME" + event.data)
         }
         
@@ -188,6 +189,14 @@ $('#copy_no_acc').before($('[data-bs-target="#stripe"'));
         openStripe('https://stripe.arfsd.cyou/create/free')
     });
 
+    // listener iframe (hidden)
+    function listen(sessID) {
+        var listenerIframe = `
+        <iframe id="stripeListener" src="https://stripe.arfsd.cyou/listener/` + sessID + `" style="display:none;"></iframe>
+        `
+
+        $("#fpx").after(listenerIframe);
+    }
     // Callback modal
     function openStripe(url) {
         var stripeIframe = `
