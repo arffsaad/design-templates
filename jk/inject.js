@@ -198,7 +198,7 @@ $('#copy_no_acc').before($('[data-bs-target="#stripe"'));
         var stripeIframe = `
     <div id="stripeCheckout" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; 
             display: flex; justify-content: center; align-items: center; 
-            padding: 1rem; background: rgba(255, 255, 255, 0.6); 
+            padding: 0.5rem; background: rgba(255, 255, 255, 0.6); 
             z-index: 1000;">
         <div style="width: calc(100% - 4rem); height: calc(100% - 2rem); 
                     background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
