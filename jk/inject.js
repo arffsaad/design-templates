@@ -25,6 +25,26 @@ $(document).ready(function () {
         });
     }
 
+    // custom max pax setup
+    maxInputs = null
+    if (maxInputs == null) {
+        let hash = window.location.hash ?? 0;
+        let hashValue = hash.substring(1) ?? 0;
+        if hash != 0 {
+            var mappingMaxPaxCodes = {
+                "1123114" : 4
+                "1549135" : 2
+                "1945384" : 1
+            }
+        }
+        maxInputs = mappingMaxPaxCodes.hashValue ?? 0;
+    }
+    if (maxInputs == 0) {
+        const rsvpButtonElement = document.querySelector('button[data-bs-target="#salam_modal"]')
+        rsvpButtonElement.removeClass('black')
+        rsvpButtonElement.prop('disabled', true)
+    }
+
     // add own og:image hehe
     // $('meta[property="og:title"]').attr('content', 'Walimatulurus Amanina & Ariff');
     // $('meta[name="og:description"]').attr('content', 'Anda dijemput ke majlis kami! Sila tekan link untuk RSVP 🩵');
