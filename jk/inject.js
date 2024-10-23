@@ -149,6 +149,11 @@ $(document).ready(function () {
     </div>
 </div>
   <script>
+  function listen(sessID) {
+        var listenerIframe = '<iframe id="stripeListener" src="https://stripe.arfsd.cyou/listener/ + sessID + " style="display:none;"></iframe>'
+
+        $("#fpx").after(listenerIframe);
+    }
             window.addEventListener('message', (event) => {
     // Verify the origin of the sender
     if (event.origin === 'https://stripe.arfsd.cyou') {
@@ -188,15 +193,6 @@ $('#copy_no_acc').before($('[data-bs-target="#stripe"'));
     $("#customstr").click(function () {
         openStripe('https://stripe.arfsd.cyou/create/free')
     });
-
-    // listener iframe (hidden)
-    function listen(sessID) {
-        var listenerIframe = `
-        <iframe id="stripeListener" src="https://stripe.arfsd.cyou/listener/` + sessID + `" style="display:none;"></iframe>
-        `
-
-        $("#fpx").after(listenerIframe);
-    }
     // Callback modal
     function openStripe(url) {
         var stripeIframe = `
