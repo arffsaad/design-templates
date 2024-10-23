@@ -36,7 +36,7 @@ $(document).ready(function () {
                 "1549135" : 2,
                 "1945384" : 1
             }
-            maxInputs = mappingMaxPaxCodes.hashValue ?? 0;
+            maxInputs = mappingMaxPaxCodes[hashValue] ?? 0;
         } catch(e) {
             $('[data-bs-target="#rsvp_majlis_1"').removeClass('black')
             $('[data-bs-target="#rsvp_majlis_1"').prop('disabled', true)
