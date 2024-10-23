@@ -40,9 +40,8 @@ $(document).ready(function () {
         maxInputs = mappingMaxPaxCodes.hashValue ?? 0;
     }
     if (maxInputs == 0) {
-        const rsvpButtonElement = document.querySelector('button[data-bs-target="#salam_modal"]')
-        rsvpButtonElement.removeClass('black')
-        rsvpButtonElement.prop('disabled', true)
+        $('[data-bs-target="#rsvp_majlis_1"').removeClass('black')
+        $('[data-bs-target="#rsvp_majlis_1"').prop('disabled', true)
     }
 
     // add own og:image hehe
