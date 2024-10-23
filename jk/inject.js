@@ -160,7 +160,7 @@ $(document).ready(function () {
             $('#stripeListener').remove();
             var thanks = new bootstrap.Offcanvas($('#stripeThanks')).show()
         } else if (message.startsWith('LISTENSTRIPEWEBHOOK=')) {
-            console.log("MSG FROM IFRAME" + event.data)
+            listen(message.split('=')[1])
         }
         
     }
