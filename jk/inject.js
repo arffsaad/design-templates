@@ -43,6 +43,11 @@ $(document).ready(function () {
         }    
     }
 
+    if (maxInputs == 0) {
+        $('[data-bs-target="#rsvp_majlis_1"').removeClass('black')
+        $('[data-bs-target="#rsvp_majlis_1"').prop('disabled', true)
+    }
+
     // add own og:image hehe
     // $('meta[property="og:title"]').attr('content', 'Walimatulurus Amanina & Ariff');
     // $('meta[name="og:description"]').attr('content', 'Anda dijemput ke majlis kami! Sila tekan link untuk RSVP 🩵');
