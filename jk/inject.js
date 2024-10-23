@@ -28,20 +28,19 @@ $(document).ready(function () {
     // custom max pax setup
     maxInputs = null
     if (maxInputs == null) {
-        let hash = window.location.hash ?? 0;
-        let hashValue = hash.substring(1) ?? 0;
-        if (hash != 0) {
+        let hash = window.location.hash;
+        try {
+            let hashValue = hash.substring(1) ?? 0;
             var mappingMaxPaxCodes = {
                 "1123114" : 4,
                 "1549135" : 2,
                 "1945384" : 1
             }
-        }
-        maxInputs = mappingMaxPaxCodes.hashValue ?? 0;
-    }
-    if (maxInputs == 0) {
-        $('[data-bs-target="#rsvp_majlis_1"').removeClass('black')
-        $('[data-bs-target="#rsvp_majlis_1"').prop('disabled', true)
+            maxInputs = mappingMaxPaxCodes.hashValue ?? 0;
+        } catch(e) {
+            $('[data-bs-target="#rsvp_majlis_1"').removeClass('black')
+            $('[data-bs-target="#rsvp_majlis_1"').prop('disabled', true)
+        }    
     }
 
     // add own og:image hehe
