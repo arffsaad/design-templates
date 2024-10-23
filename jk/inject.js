@@ -32,8 +32,8 @@ $(document).ready(function () {
         let hashValue = hash.substring(1) ?? 0;
         if (hash != 0) {
             var mappingMaxPaxCodes = {
-                "1123114" : 4
-                "1549135" : 2
+                "1123114" : 4,
+                "1549135" : 2,
                 "1945384" : 1
             }
         }
