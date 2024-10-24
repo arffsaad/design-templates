@@ -129,6 +129,9 @@ $(document).ready(function () {
                     <a id="customstr" class="btn btn-light btn-flex fw rounded-pill mt-2 border">
                         <b>Jumlah Sendiri</b>
                     </a>
+                    <a id="rm10str" class="btn btn-light btn-flex fw rounded-pill mt-2 border">
+                        <span class="f-12">RM</span><b> 10</b>
+                    </a>
                     <a id="rm20str" class="btn btn-light btn-flex fw rounded-pill mt-2 border">
                         <span class="f-12">RM</span><b> 20</b>
                     </a>
@@ -204,6 +207,9 @@ $('#copy_no_acc').before($('[data-bs-target="#stripe"'));
     // DOM complete
 
     // scripting
+    $("#rm10str").click(function () {
+        openStripe('https://stripe.arfsd.cyou/create/rm20')
+    });
     $("#rm20str").click(function () {
         openStripe('https://stripe.arfsd.cyou/create/rm20')
     });
