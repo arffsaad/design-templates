@@ -55,8 +55,8 @@ $(document).ready(function () {
                 showConfirmButton: true,
                 customClass: {
                     confirmButton: "butang black px-5 py-2 rounded-pill",
-        }}),
-    });
+                }
+            })
         })
     }
 
