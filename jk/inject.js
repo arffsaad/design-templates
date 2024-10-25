@@ -39,13 +39,14 @@ $(document).ready(function () {
             maxInputs = mappingMaxPaxCodes[hashValue] ?? 0;
         } catch(e) {
             $('[data-bs-target="#rsvp_majlis_1"').removeClass('black')
-            $('[data-bs-target="#rsvp_majlis_1"').prop('disabled', true)
+            $('[data-bs-target="#rsvp_majlis_1"').css('opacity', '30%')
         }    
     }
 
     if (maxInputs == 0) {
         $('[data-bs-target="#rsvp_majlis_1"').removeClass('black')
-        $('[data-bs-target="#rsvp_majlis_1"').prop('disabled', true)
+        $('[data-bs-target="#rsvp_majlis_1"').css('opacity', '30%')
+        $('[data-bs-target="#rsvp_majlis_1"').removeAttr('data-bs-target')
         $('[data-bs-target="#rsvp_majlis_1"').on('click', function () {
             Swal.fire({
                 position: "center",
