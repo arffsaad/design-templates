@@ -46,7 +46,7 @@ $(document).ready(function () {
     if (maxInputs == 0) {
         $('[data-bs-target="#rsvp_majlis_1"').removeClass('black')
         $('[data-bs-target="#rsvp_majlis_1"').prop('disabled', true)
-        $('[data-bs-target="#rsvp_majlis_1"').click(function () {
+        $('[data-bs-target="#rsvp_majlis_1"').on('click', function () {
             Swal.fire({
                 position: "center",
                 icon: "error",
