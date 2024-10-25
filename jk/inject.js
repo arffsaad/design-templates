@@ -46,6 +46,18 @@ $(document).ready(function () {
     if (maxInputs == 0) {
         $('[data-bs-target="#rsvp_majlis_1"').removeClass('black')
         $('[data-bs-target="#rsvp_majlis_1"').prop('disabled', true)
+        $('[data-bs-target="#rsvp_majlis_1"').click(function () {
+            Swal.fire({
+                position: "center",
+                icon: "error",
+                html:
+                    "<div class='fw-bolder'>RSVP Belum/Tidak Dibuka. <a href='https://api.whatsapp.com/send?phone=601123787415&text=RSVP%20Majlis%20Walimatulurus%20Amanina%20%26%20Ariff%20'>Tekan</a> untuk maklumat lanjut.</div>",
+                showConfirmButton: true,
+                customClass: {
+                    confirmButton: "butang black px-5 py-2 rounded-pill",
+        },
+    });
+        })
     }
 
     // add own og:image hehe
