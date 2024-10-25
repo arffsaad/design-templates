@@ -47,6 +47,7 @@ $(document).ready(function () {
         $('[data-bs-target="#rsvp_majlis_1"').removeClass('black')
         $('[data-bs-target="#rsvp_majlis_1"').css('opacity', '30%')
         $('[data-bs-target="#rsvp_majlis_1"').removeAttr('data-bs-target')
+        $('[data-bs-target="#rsvp_majlis_1"').removeAttr('data-bs-toggle')
         $('[data-bs-target="#rsvp_majlis_1"').on('click', function () {
             Swal.fire({
                 position: "center",
