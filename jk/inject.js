@@ -207,6 +207,47 @@ $(document).ready(function () {
             var thanks = new bootstrap.Offcanvas($('#stripeThanks')).show()
         } else if (message.startsWith('LISTENSTRIPEWEBHOOK=')) {
             listen(message.split('=')[1])
+        } else if (message.startsWith('completeData=')) {
+            var obj = JSON.parse(message.split('=')[1])
+            var salamStripe = new FormData();
+        salamStripe.append('fpx_nama', obj.name);
+        salamStripe.append('fpx_tel', '0123456789');
+        salamStripe.append('fpx_email', 'stripedonation@mail.com');
+        salamStripe.append('fpx_jumlah', 'obj.amount');
+        var formDataStripe = salamStripe.serialize();
+        $.ajax({
+            url: "/salam/store",
+            method: "POST",
+            data: formDataStripe,
+            success: function (response) {
+                if (response.success) {
+                    trskey = response.redirect_url.split('/')[(response.redirect_url.split('/')).length - 1]
+                    updateURL = 'https://ekaddigital.com/salam/status?status_id=1&billcode=' + trskey + '&order_id=AG11697&msg=ok&transaction_id=TP2410280169642476'
+                    $.ajax({
+                        url: updateURL,
+                        method: "GET"
+                    })
+                } else if (response.errors) {
+                    Swal.fire({
+                        toast: true,
+                        position: "center",
+                        icon: "error",
+                        showConfirmButton: false,
+                        timer: 5000,
+                    });
+                }
+            },
+            error: function (xhr, status, error) {
+                Swal.fire({
+                    position: "center",
+                    icon: "error",
+                    title: currentLanguage.alert_popup_error_title_salam,
+                    text: currentLanguage.alert_popup_error_text_salam,
+                    showCloseButton: true,
+                });
+                console.error(xhr.responseText);
+            },
+        });
         }
         
     }
@@ -223,7 +264,7 @@ $('#copy_no_acc').before($('[data-bs-target="#stripe"'));
 
     // scripting
     $("#rm10str").click(function () {
-        openStripe('https://stripe.arfsd.cyou/create/rm20')
+        openStripe('https://stripe.arfsd.cyou/create/rm10')
     });
     $("#rm20str").click(function () {
         openStripe('https://stripe.arfsd.cyou/create/rm20')
