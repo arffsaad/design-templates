@@ -26,7 +26,7 @@ $(document).ready(function () {
     }
 
     // change font for guestbook
-    $('.kotak-guestbook.guestbook_chat.text_tulisan').css({'font-family': 'Noto Serif'})
+    $('.text_tulisan').css({'font-family': 'Noto Serif'})
 
     // custom max pax setup
     maxInputs = null
