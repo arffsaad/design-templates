@@ -1,5 +1,5 @@
 if (!(window.location.href).includes('yangarifftentangnina.com')) {
-    window.location.replace("https://yangarifftentangnina.com")
+    window.location.replace("https://sanding.yangarifftentangnina.com")
 }
 $(document).ready(function () {
     const headURL = "https://yangarifftentangnina.com";
