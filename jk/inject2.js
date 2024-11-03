@@ -1,8 +1,8 @@
 if (!(window.location.href).includes('yangarifftentangnina.com')) {
-    window.location.replace("https://jemputan.yangarifftentangnina.com")
+    window.location.replace("https://tandang.yangarifftentangnina.com")
 }
 $(document).ready(function () {
-    const headURL = "https://jemputan.yangarifftentangnina.com";
+    const headURL = "https://tandang.yangarifftentangnina.com";
     // add favicon sendiri because why not
     // document.querySelector("head > link:nth-child(17)").remove()
     var link = document.createElement('link');
@@ -83,9 +83,6 @@ $(document).ready(function () {
     //     title = title.substring(1) + title.charAt(0);
     //     document.title = title.substring(0, titleLength - 1);
     // }, 300);
-
-    // Rename salam kaut to Sumbangan Ikhlas
-    const salamKautElement = document.querySelector('button[data-bs-target="#salam_modal"]');
 
     // Hide promo card
     document.querySelector("body > div.ekad-width.text-center > b > b > b > div.mt-4.px-1").style.display = 'none';
