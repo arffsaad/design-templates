@@ -86,7 +86,7 @@ $(document).ready(function () {
 
     // Rename salam kaut to Sumbangan Ikhlas
     const salamKautElement = document.querySelector('button[data-bs-target="#salam_modal"]');
-    salamKautElement.innerHTML = '<i class="ti ti-cash position-absolute top-50 translate-middle-y f-25 start-20"></i><div>Sumbangan Ikhlas</div>';
+    salamKautElement.innerHTML = '<i class="ti ti-cash position-absolute top-50 translate-middle-y f-25 start-20"></i><div>Salam Kaut Digital</div>';
     document.querySelector('#salam_modal > div.ekad-width > div > h5').innerHTML = 'Sumbangan Ikhlas <i class="ti ti-cash f-25"></i>';
 
     // Hide promo card
