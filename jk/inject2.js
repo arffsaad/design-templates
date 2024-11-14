@@ -1,8 +1,8 @@
 if (!(window.location.href).includes('yangarifftentangnina.com')) {
-    window.location.replace("https://tandang.yangarifftentangnina.com")
+    window.location.replace("https://always.yangarifftentangnina.com")
 }
 $(document).ready(function () {
-    const headURL = "https://tandang.yangarifftentangnina.com";
+    const headURL = "https://always.yangarifftentangnina.com";
     // add favicon sendiri because why not
     // document.querySelector("head > link:nth-child(17)").remove()
     var link = document.createElement('link');
@@ -57,8 +57,7 @@ $(document).ready(function () {
                 position: "center",
                 icon: "error",
                 html:
-                    "<div class='fw-bolder'>RSVP Belum/Tidak Dibuka. <a href='https://api.whatsapp.com/send?phone=601123787415&text=RSVP%20Majlis%20Walimatulurus%20Amanina%20%26%20Ariff%20'>Tekan</a> untuk maklumat lanjut.</div>",
-                    "<div class='fw-bolder'>RSVP is not open/available. <a href='https://api.whatsapp.com/send?phone=601123787415&text=RSVP%20Majlis%20Walimatulurus%20Amanina%20%26%20Ariff%20'>Click here</a> for more information.</div>",
+                    "<div class='fw-bolder'>RSVP Belum/Tidak Dibuka. <a href='https://api.whatsapp.com/send?phone=601123787415&text=RSVP%20Majlis%20Walimatulurus%20Amanina%20%26%20Ariff%20'>Tekan</a> untuk maklumat lanjut.</div><div class='fw-bolder'>RSVP is not open/available. <a href='https://api.whatsapp.com/send?phone=601123787415&text=RSVP%20Majlis%20Walimatulurus%20Amanina%20%26%20Ariff%20'>Click here</a> for more information.</div>",
                 showConfirmButton: true,
                 customClass: {
                     confirmButton: "butang black px-5 py-2 rounded-pill",
