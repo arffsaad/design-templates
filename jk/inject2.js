@@ -123,6 +123,8 @@ $(document).ready(function () {
     bahasa_2.label_salam_note_stripe = 'Apple Pay and Google Pay is also accepted.'
     bahasa_1.label_stripe_thanks = 'Terima kasih atas sumbangan anda. Moga kita dapat bertemu pada majlis nanti!'
     bahasa_2.label_stripe_thanks = 'Thanks for your contributions! Hope to see you on the big day!'
+    bahasa_1.label_jumlah_sendiri = 'Jumlah Sendiri'
+    bahasa_2.label_jumlah_sendiri = 'Custom Amount'
     
     
     var stripeModal = `
@@ -148,7 +150,7 @@ $(document).ready(function () {
             <div>
                 <div class="flex-column">
                     <a id="customstr" class="btn btn-light btn-flex fw rounded-pill mt-2 border">
-                        <b>Jumlah Sendiri</b>
+                        <b class="label-jumlah-sendiri">Jumlah Sendiri</b>
                     </a>
                     <a id="rm10str" class="btn btn-light btn-flex fw rounded-pill mt-2 border">
                         <span class="f-12">RM</span><b> 10</b>
@@ -283,5 +285,6 @@ stripeIframe += `" style="width: 100%; height: 100%; border: none;"></iframe>
     $(".languageToggle").change(function () {
         $(".label-salam-note-stripe").html(currentLanguage.label_salam_note_stripe);
         $(".label-stripe-thanks").html(currentLanguage.label_stripe_thanks);
+        $(".label-jumlah-sendiri").html(currentLanguage.label_jumlah_sendiri);
     })
 });
