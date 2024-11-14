@@ -110,12 +110,20 @@ $(document).ready(function () {
     var stripeButton = `
         <button class="butang white mb-2 mt-3 py-3" data-bs-target="#stripe" data-bs-toggle="offcanvas">
     <i class="ti ti-credit-card-pay position-absolute top-50 translate-middle-y f-25 start-20"></i>
-    <div><span class="label-salam-fpx f-12">GrabPay, Apple Pay, Debit/Credit</span></div>
+    <div><span class="label-salam-stripe f-12">GrabPay, Apple Pay, Debit/Credit</span></div>
 </button>
     `;
 
     // Append the new button after the last button
     $('#copy_no_acc').before(stripeButton);
+
+    // TEXT TO BE CHANGED
+    // label-salam-note-stripe
+    bahasa_1.label_salam_note_stripe = 'Apple Pay dan Google Pay juga diterima.'
+    bahasa_2.label_salam_note_stripe = 'Apple Pay and Google Pay is also accepted.'
+    bahasa_1.label_stripe_thanks = 'Terima kasih atas sumbangan anda. Moga kita dapat bertemu pada majlis nanti!'
+    bahasa_2.label_stripe_thanks = 'Thanks for your contributions! Hope to see you on the big day!'
+    
     
     var stripeModal = `
     <div class="offcanvas offcanvas-bottom" id="stripe">
@@ -135,7 +143,7 @@ $(document).ready(function () {
         <div class="ekad-width">
             <div class="nota fw-bold mt-2 rounded p-4">
                 <i class="bi bi-exclamation-triangle-fill"></i><br>
-                <span class="label-salam-note">Apple Pay dan Google Pay juga diterima.</span>
+                <span class="label-salam-note-stripe">Apple Pay dan Google Pay juga diterima.</span>
             </div>
             <div>
                 <div class="flex-column">
@@ -182,7 +190,7 @@ $(document).ready(function () {
         <div class="ekad-width">
             <div class="nota fw-bold mt-2 rounded p-4">
                 <i class="bi bi-emoji-laughing-fill"></i><br>
-                <span class="label-salam-note">Terima kasih atas sumbangan anda. Moga kita dapat bertemu pada majlis nanti!</span>
+                <span class="label-stripe-thanks">Terima kasih atas sumbangan anda. Moga kita dapat bertemu pada majlis nanti!</span>
             </div>
         </div>
     </div>
@@ -270,4 +278,10 @@ stripeIframe += `" style="width: 100%; height: 100%; border: none;"></iframe>
     }
 
     // scripting complete
+
+    // language scripting
+    $(".languageToggle").change(function () {
+        $(".label-salam-note-stripe").html(currentLanguage.label_salam_note_stripe);
+        $(".label-stripe-thanks").html(currentLanguage.label_stripe_thanks);
+    })
 });
