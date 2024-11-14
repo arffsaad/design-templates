@@ -1,8 +1,8 @@
 if (!(window.location.href).includes('yangarifftentangnina.com')) {
-    window.location.replace("https://sanding.yangarifftentangnina.com")
+    window.location.replace("https://forever.yangarifftentangnina.com")
 }
 $(document).ready(function () {
-    const headURL = "https://yangarifftentangnina.com";
+    const headURL = "https://forever.yangarifftentangnina.com";
     // add favicon sendiri because why not
     // document.querySelector("head > link:nth-child(17)").remove()
     var link = document.createElement('link');
