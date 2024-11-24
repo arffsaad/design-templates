@@ -57,7 +57,7 @@ $(document).ready(function () {
                 position: "center",
                 icon: "error",
                 html:
-                    "<div class='fw-bolder'>RSVP Belum/Tidak Dibuka. <a href='https://api.whatsapp.com/send?phone=601123787415&text=RSVP%20Majlis%20Walimatulurus%20Amanina%20%26%20Ariff%20'>Tekan</a> untuk maklumat lanjut.</div><div class='fw-bolder'>RSVP is not open/available. <a href='https://api.whatsapp.com/send?phone=601123787415&text=RSVP%20Majlis%20Walimatulurus%20Amanina%20%26%20Ariff%20'>Click here</a> for more information.</div>",
+                    "<div class='fw-bolder'>RSVP Belum/Tidak Dibuka. <a href='https://api.whatsapp.com/send?phone=601123787415&text=RSVP%20Majlis%20Walimatulurus%20Amanina%20%26%20Ariff%20Dewan%20Jubli%20Intan'>Tekan</a> untuk maklumat lanjut.</div><div class='fw-bolder'>RSVP is not open/available. <a href='https://api.whatsapp.com/send?phone=601123787415&text=RSVP%20Majlis%20Walimatulurus%20Amanina%20%26%20Ariff%20'>Click here</a> for more information.</div>",
                 showConfirmButton: true,
                 customClass: {
                     confirmButton: "butang black px-5 py-2 rounded-pill",
