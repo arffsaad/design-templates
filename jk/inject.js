@@ -95,7 +95,7 @@ $(document).ready(function () {
 
     // rearrange card
     var sumbanganCard = $('#salam_modal').parent();
-    var carousellCard = $('#gmbr').parent().parent().parent();
+    var carousellCard = $('.gambar-swiper').parent().parent().parent().parent();
     $('#rsvp').after(sumbanganCard)
     $('#rsvp').before(carousellCard)
     
