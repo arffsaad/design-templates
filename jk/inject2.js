@@ -57,7 +57,7 @@ $(document).ready(function () {
                 position: "center",
                 icon: "error",
                 html:
-                    "<div class='fw-bolder'>RSVP Tidak Dibuka.<br>Sila tekan semula link yang diberikan oleh pihak pengantin kepada anda.</div><div class='fw-bolder'>RSVP is not available.<br>Please re-open the invite via the link sent to you.</div>",
+                    "<div class='fw-bolder'>RSVP Tidak Dibuka.<br>Sila tekan semula link yang diberikan oleh pihak pengantin kepada anda.</div><br><div class='fw-bolder' style='font-style: italic;'>RSVP is not available.<br>Please re-open the invite via the link sent to you.</div>",
                 showConfirmButton: true,
                 customClass: {
                     confirmButton: "butang black px-5 py-2 rounded-pill",
