@@ -308,6 +308,7 @@ stripeIframe += `" style="width: 100%; height: 100%; border: none;"></iframe>
     <script>
         $('#closeStripeIframe').click(function () {
             $('#stripeCheckout').remove();
+            $('#stripeListener').remove();
         })
     </script>
 `
