@@ -88,13 +88,7 @@ $(document).ready(function () {
     const salamKautElement = document.querySelector('button[data-bs-target="#salam_modal"]');
     salamKautElement.innerHTML = '<i class="ti ti-cash position-absolute top-50 translate-middle-y f-25 start-20"></i><div>Salam Kaut Digital</div>';
     document.querySelector('#salam_modal > div.ekad-width > div > h5').innerHTML = 'Sumbangan Ikhlas <i class="ti ti-cash f-25"></i>';
-
-    // Hide promo card
-    // document.querySelector("body > div.ekad-width.text-center > b > b > b > div.mt-4.px-1").style.display = 'none';
-    $('#logo_modal').parent().parent().hide();
-    $('#logo_modal').parent().parent().prev().css('margin-bottom', '9em');
-    // document.querySelector("body > div.ekad-width.text-center > b > b > b > div:nth-child(2)").style.marginBottom = '9em';
-
+    
     // rearrange card
     var sumbanganCard = $('#salam_modal').parent();
     var carousellCard = $('.gambar-swiper').parent().parent().parent().parent();
@@ -318,6 +312,13 @@ stripeIframe += `" style="width: 100%; height: 100%; border: none;"></iframe>
 
         bootstrap.Offcanvas.getInstance($('#stripe')).hide();
     }
+
+    // Hide promo card
+    // document.querySelector("body > div.ekad-width.text-center > b > b > b > div.mt-4.px-1").style.display = 'none';
+    $('#logo_modal').parent().parent().hide();
+    $('#logo_modal').parent().parent().prev().css('margin-bottom', '9em');
+    // document.querySelector("body > div.ekad-width.text-center > b > b > b > div:nth-child(2)").style.marginBottom = '9em';
+
 
     // scripting complete
 });
