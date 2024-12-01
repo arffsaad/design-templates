@@ -35,7 +35,9 @@ $(document).ready(function () {
         try {
             let hashValue = hash.substring(1) ?? 0;
             var mappingMaxPaxCodes = {
+                "4293026" : 6,
                 "1123114" : 4,
+                "8242543" : 3,
                 "1549135" : 2,
                 "1945384" : 1
             }
