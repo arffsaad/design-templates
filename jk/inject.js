@@ -138,7 +138,7 @@ $(document).ready(function () {
         <div class="ekad-width">
             <div class="nota fw-bold mt-2 rounded p-4">
                 <i class="bi bi-exclamation-triangle-fill"></i><br>
-                <span class="label-salam-note">Apple Pay dan Google Pay juga diterima.<br>Sila tunggu seketika untuk butang Apple/Google Pay untuk muncul.</span>
+                <span class="label-salam-note">Apple Pay dan Google Pay juga diterima.<br>Sila tunggu seketika untuk butang Apple/Google Pay untuk muncul selepas menekan jumlah.</span>
             </div>
             <div>
                 <div class="flex-column">
