@@ -83,16 +83,6 @@ $(document).ready(function () {
     //     title = title.substring(1) + title.charAt(0);
     //     document.title = title.substring(0, titleLength - 1);
     // }, 300);
-
-    // Hide promo card
-    document.querySelector("body > div.ekad-width.text-center > b > b > b > div.mt-4.px-1").style.display = 'none';
-    document.querySelector("body > div.ekad-width.text-center > b > b > b > div:nth-child(2)").style.marginBottom = '9em';
-
-    // rearrange card
-    var sumbanganCard = $('#salam_modal').parent();
-    var carousellCard = $('#gmbr').parent().parent().parent();
-    $('#rsvp').after(sumbanganCard)
-    $('#rsvp').before(carousellCard)
     
 
     // Add custom rsvp groups
@@ -279,6 +269,13 @@ stripeIframe += `" style="width: 100%; height: 100%; border: none;"></iframe>
         bootstrap.Offcanvas.getInstance($('#stripe')).hide();
     }
 
+
+    // Hide promo card
+    // document.querySelector("body > div.ekad-width.text-center > b > b > b > div.mt-4.px-1").style.display = 'none';
+    $('#logo_modal').parent().parent().hide();
+    $('#logo_modal').parent().parent().prev().css('margin-bottom', '9em');
+    // document.querySelector("body > div.ekad-width.text-center > b > b > b > div:nth-child(2)").style.marginBottom = '9em';
+
     // scripting complete
 
     // language scripting
@@ -287,4 +284,10 @@ stripeIframe += `" style="width: 100%; height: 100%; border: none;"></iframe>
         $(".label-stripe-thanks").html(currentLanguage.label_stripe_thanks);
         $(".label-jumlah-sendiri").html(currentLanguage.label_jumlah_sendiri);
     })
+    
+    // rearrange card
+    var sumbanganCard = $('#salam_modal').parent();
+    var carousellCard = $('.gambar-swiper').parent().parent().parent().parent();
+    $('#rsvp').after(sumbanganCard)
+    $('#rsvp').before(carousellCard)
 });
