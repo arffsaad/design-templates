@@ -109,8 +109,8 @@ $(document).ready(function () {
 
     // TEXT TO BE CHANGED
     // label-salam-note-stripe
-    bahasa_1.label_salam_note_stripe = 'Apple Pay dan Google Pay juga diterima.'
-    bahasa_2.label_salam_note_stripe = 'Apple Pay and Google Pay is also accepted.'
+    bahasa_1.label_salam_note_stripe = 'Apple Pay dan Google Pay juga diterima.<br>Sila tunggu seketika untuk butang Apple/Google Pay untuk muncul selepas menekan jumlah.'
+    bahasa_2.label_salam_note_stripe = 'Apple Pay and Google Pay is also accepted.<br>Please wait a few moments for the Apple/Google Pay button to load after choosing amount.'
     bahasa_1.label_stripe_thanks = 'Terima kasih atas sumbangan anda. Moga kita dapat bertemu pada majlis nanti!'
     bahasa_2.label_stripe_thanks = 'Thanks for your contributions! Hope to see you on the big day!'
     bahasa_1.label_jumlah_sendiri = 'Jumlah Sendiri'
