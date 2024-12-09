@@ -86,13 +86,7 @@ $(document).ready(function () {
     
 
     // Add custom rsvp groups
-    const selectElement = $('#rsvp1_hubungan');
-    selectElement.find('option:not(:first)').remove();
-    const newOptions = ['Keluarga/Rakan Bapa Pengantin Perempuan', 'Keluarga/Rakan Ibu Pengantin Perempuan', 'Rakan Pengantin Perempuan', 'Keluarga Pengantin Lelaki'];
-
-    newOptions.forEach(optionText => {
-        selectElement.append(new Option(optionText, optionText));
-    });
+    
 
     // Add stripe payment for Credit/Debit.
 
