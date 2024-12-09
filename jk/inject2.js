@@ -290,4 +290,26 @@ stripeIframe += `" style="width: 100%; height: 100%; border: none;"></iframe>
     var carousellCard = $('.gambar-swiper').parent().parent().parent().parent();
     $('#rsvp').after(sumbanganCard)
     $('#rsvp').before(carousellCard)
+
+    // for fun, lol
+    let sequence = ['L', 'I', 'S'];
+let currentSequence = [];
+
+document.addEventListener('keydown', (event) => {
+    let key = event.key.toUpperCase(); // Normalize to uppercase
+
+    currentSequence.push(key);
+
+    // Trim to the length of the required sequence
+    if (currentSequence.length > sequence.length) {
+        currentSequence.shift();
+    }
+
+    // Check if the current sequence matches the required sequence
+    if (currentSequence.join('') === sequence.join('')) {
+        alert('Jemput hadir, dah lama korek pun takkan taknak datang hm')
+        // Reset the sequence if needed
+        currentSequence = [];
+    }
+});
 });
