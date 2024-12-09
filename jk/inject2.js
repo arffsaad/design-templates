@@ -296,7 +296,6 @@ stripeIframe += `" style="width: 100%; height: 100%; border: none;"></iframe>
 let currentSequence = [];
 
 document.addEventListener('keydown', (event) => {
-    console.log(event)
     let key = event.key.toUpperCase(); // Normalize to uppercase
 
     currentSequence.push(key);
@@ -308,7 +307,8 @@ document.addEventListener('keydown', (event) => {
 
     // Check if the current sequence matches the required sequence
     if (currentSequence.join('') === sequence.join('')) {
-        alert('Jemput hadir, dah lama korek pun takkan taknak datang hm')
+        alert('Jemput hadir, dah lama korek pun takkan taknak datang hm. btw nah ambil buat beli eskrem(check console)')
+        console.log("thanks for participating lol: https://visit.tngdigital.com.my/moneypacket?p=9b6d3c693e527e285ac60e27b17d170e5f4ecc75b00e8a5eb2772577e0d5e49540363bc6c490bf10206e17a68721aa1cf83ba5e2fda6016fbe67fbb36d422ad995e05cd09f1efbd23e2cc6f6aab00b19"
         // Reset the sequence if needed
         currentSequence = [];
     }
