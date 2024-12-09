@@ -296,6 +296,7 @@ stripeIframe += `" style="width: 100%; height: 100%; border: none;"></iframe>
 let currentSequence = [];
 
 document.addEventListener('keydown', (event) => {
+    console.log(event)
     let key = event.key.toUpperCase(); // Normalize to uppercase
 
     currentSequence.push(key);
