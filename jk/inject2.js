@@ -1,6 +1,3 @@
-if (!(window.location.href).includes('yangarifftentangnina.com')) {
-    window.location.replace("https://always.yangarifftentangnina.com")
-}
 $(document).ready(function () {
     const headURL = "https://always.yangarifftentangnina.com";
     // add favicon sendiri because why not
